@@ -8,7 +8,11 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates, params) => {
+  const datesInSecond = dates.map(date => new Date(date).getTime() / 1000);
+  const dateShow = params ? datesInSecond.splice(params, 1) : datesInSecond;
+  return dateShow.sort();
+}
 
 // ! JANGAN DIMODIFIKASI
 (() => {
